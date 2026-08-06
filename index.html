@@ -463,7 +463,10 @@ const allNodes = [];
 collectAll(rootEl, allNodes);
 
 function clearMatches(){
-  for(const el of allNodes) el._row.classList.remove('match');
+  for(const el of allNodes){
+    el._row.classList.remove('match');
+    el._row.classList.remove('current-match');
+  }
 }
 
 function expandPathTo(el){
